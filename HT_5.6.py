@@ -4,11 +4,20 @@
 
 def new_range(finish, start = 0, step = 1):
     num = start
-    while num < finish:
+    while num < finish and step > 0:
         yield num
         num += step
 
+    while num > finish and step < 0:
+        yield num
+        num += step
+
+for i in new_range(0, 10, -1):
+    print(i)
+
 for i in new_range(5):
     print(i)
+
+
 
 
