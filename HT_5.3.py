@@ -39,6 +39,9 @@ def validation_user(user_name, password):
     if len(password) < 8:
         raise ShortPass('Password length must be >= 8')
 
+    if len(password) == 13:
+        raise DemonNum ('Pass can not be len 13')
+
     if check_flag == False:
         raise NoDigit('Password must include at least 1 digit')
 
