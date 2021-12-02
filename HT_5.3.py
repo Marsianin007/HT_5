@@ -20,6 +20,8 @@ class ShortPass(Exception):
     pass
 class NoDigit(Exception):
     pass
+class DemonNum(Exception):
+    pass
 
 
 def validation_user(user_name, password):
@@ -56,6 +58,8 @@ def check_each_user():
             print("Status: " + "Password must be >= 8")
         except NoDigit:
             print("Status: " + "Password must include at least 1 digit")
+        except DemonNum:
+            print("Status: " + "pass can not be len 13")
         else:
             print("Status: OK")
 

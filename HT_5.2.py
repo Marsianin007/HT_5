@@ -25,5 +25,8 @@ def validation_user(user_name, password):
     if check_flag == False:
         raise Exception('password must include at least 1 digit')
 
+    if len(password) == 13:
+        raise Exception('Demon number, pass can not be len 13')
+
 
 validation_user("Marsianin", "kjfsdfdsd9")
